@@ -31,4 +31,7 @@
     <string name="config_batDesCap"></string>
     <string name="config_batChargeCycle"></string>
 
+     <!-- Maintainer -->
+    <string name="maintainer">Maintainer</string>
+
 </resources>
