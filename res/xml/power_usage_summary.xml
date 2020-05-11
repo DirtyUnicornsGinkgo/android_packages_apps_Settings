@@ -79,4 +79,9 @@
         android:fragment="com.android.settings.display.BatteryLightSettings"
         settings:controller="com.android.settings.display.BatteryLightSettingsPreferenceController"/>
 
+    <com.android.settings.fuelgauge.PowerGaugePreference
+        android:key="battery_charge_cycles"
+        android:title="@string/battery_charge_cycles"
+        android:selectable="false" />
+
 </PreferenceScreen>
