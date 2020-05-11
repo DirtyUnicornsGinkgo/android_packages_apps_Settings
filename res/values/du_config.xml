@@ -26,4 +26,8 @@
     <!-- Whether to display touch sensitivity switch -->
     <bool name="config_show_touch_sensitivity">false</bool>
 
+    <!-- Battery Health -->
+    <string name="config_batCurCap"></string>
+    <string name="config_batDesCap"></string>
+
 </resources>

@@ -92,6 +92,9 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
     private static final String FILENAME_BATTERY_CURRENT_CAPACITY =
             "/sys/class/power_supply/bms/charge_full";
 
+    private String mBatDesCap;
+    private String mBatCurCap;
+
     @VisibleForTesting
     static final int BATTERY_INFO_LOADER = 1;
     @VisibleForTesting
@@ -357,13 +360,16 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
             mNeedUpdateBatteryTip = true;
         }
 
+        mBatDesCap = getResources().getString(R.string.config_batDesCap);
+        mBatCurCap = getResources().getString(R.string.config_batCurCap);
+
         // reload BatteryInfo and updateUI
         restartBatteryInfoLoader();
         updateLastFullChargePreference();
         mScreenUsagePref.setSubtitle(StringUtil.formatElapsedTime(getContext(),
                 mBatteryUtils.calculateScreenUsageTime(mStatsHelper), false));
-        mCurrentBatteryCapacity.setSubtitle(parseBatterymAhText(FILENAME_BATTERY_CURRENT_CAPACITY));
-        mDesignedBatteryCapacity.setSubtitle(parseBatterymAhText(FILENAME_BATTERY_DESIGN_CAPACITY));
+        mCurrentBatteryCapacity.setSubtitle(parseBatterymAhText(mBatCurCap));
+        mDesignedBatteryCapacity.setSubtitle(parseBatterymAhText(mBatDesCap));
     }
 
     @VisibleForTesting
