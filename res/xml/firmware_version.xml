@@ -22,7 +22,13 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
-    <!-- Android version -->
+    <!-- DirtyUnicorns logo -->
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="logo_du"
+        android:layout="@layout/logo_du"
+        android:selectable="false"/>
+
+    <!--Android version-->
     <Preference
         android:key="os_firmware_version"
         android:title="@string/firmware_version"
