@@ -32,7 +32,7 @@
     <string name="config_batChargeCycle"></string>
 
      <!-- Maintainer -->
-    <string name="maintainer">DU Maintainer</string>
+    <string name="maintainer">Maintainer</string>
     <string name="maintainer_name">Andra Ramadan Pratama</string>
 
 </resources>
